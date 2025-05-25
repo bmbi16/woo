@@ -1,0 +1,138 @@
+/**
+ * WP Direct Order Plugin Frontend Styles
+ */
+
+/* General Form Styling */
+.wdop-order-form {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.wdop-fields-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Spacing between fields */
+}
+
+/* Hide default add to cart form if needed (adjust selector based on theme) */
+body.single-product form.cart {
+    display: none !important; /* Use important cautiously, maybe add admin option later */
+}
+
+/* Field Styling */
+.wdop-order-form p.form-row {
+    margin-bottom: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.wdop-order-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.wdop-order-form .input-text,
+.wdop-order-form .wdop-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.wdop-order-form .wdop-select {
+    /* Appearance for select dropdowns */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27292.4%27%20height%3D%27292.4%27%3E%3Cpath%20fill%3D%27%23007CB2%27%20d%3D%27M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%27%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: .65em auto;
+    padding-right: 30px; /* Make space for arrow */
+}
+
+.wdop-order-form select:disabled {
+    background-color: #eee;
+    cursor: not-allowed;
+}
+
+.wdop-order-form .required {
+    color: red;
+    font-weight: bold;
+    margin-left: 3px;
+}
+
+/* Shipping Methods */
+.wdop-shipping-methods {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #ccc;
+}
+
+.wdop-shipping-methods h2 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.wdop-shipping-method-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wdop-shipping-method-list li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center; /* Align radio button and label */
+}
+
+.wdop-shipping-method-list input[type="radio"] {
+    margin-right: 8px;
+    margin-left: 0; /* Reset default */
+}
+
+.wdop-shipping-method-list label {
+    font-weight: normal;
+    margin-bottom: 0; /* Override default label margin */
+}
+
+/* Submit Button */
+.wdop-submit-button {
+    margin-top: 15px;
+}
+
+.wdop-submit-button .button {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1.1em;
+}
+
+/* --- RTL Styles --- */
+[dir="rtl"] .wdop-order-form label {
+    text-align: right;
+}
+
+[dir="rtl"] .wdop-order-form .required {
+    margin-left: 0;
+    margin-right: 3px;
+}
+
+[dir="rtl"] .wdop-order-form .wdop-select {
+    background-position: left 10px top 50%;
+    padding-left: 30px;
+    padding-right: 12px;
+}
+
+[dir="rtl"] .wdop-shipping-method-list input[type="radio"] {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+/* Add more specific RTL adjustments as needed */
+
